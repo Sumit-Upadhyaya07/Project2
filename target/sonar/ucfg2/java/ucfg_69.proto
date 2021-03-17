@@ -1,158 +1,16 @@
 
-Kcom.infosys.FA4group6.OrderDTO.OrderDetailsDTO#toString()Ljava/lang/String;f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java9 9("1*£"
+Lcom.infosys.FA4group6.OrderDTO.OrderDetailsDTO#getStatus()Ljava/lang/String;f
+\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java= =("1*¼
 1f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 :($Ë
-È
+\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java>	 >(É
+Æ
 f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:' :(.
-%0java.lang.Integer"__id*?*=0
-.com.infosys.FA4group6.OrderDTO.OrderDetailsDTO"	
-orderIdÇ
-Ä
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 :(.
-%1java.lang.String"__concat*
-OrderDetailsDTO [orderId=*
-
-%0java.lang.Integer·
-´
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 :(=
-%2java.lang.String"__concat*
-
-%1java.lang.String*
-
-, buyerId=Ë
-È
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:@ :(G
-%3java.lang.Integer"__id*?*=0
-.com.infosys.FA4group6.OrderDTO.OrderDetailsDTO"	
-buyerIdÂ
-¿
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 :(G
-%4java.lang.String"__concat*
-
-%2java.lang.String*
-
-%3java.lang.Integer¶
-³
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 :(U
-%5java.lang.String"__concat*
-
-%4java.lang.String*
-	, amount=Í
-Ê
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:X :(^
-%6java.math.BigDecimal"__id*>*<0
+\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java>	 >(
+%0java.lang.String"__id*>*<0
 .com.infosys.FA4group6.OrderDTO.OrderDetailsDTO"
-amountÅ
-Â
+status"‚
 f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 :(^
-%7java.lang.String"__concat*
+\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java> >(
 
-%5java.lang.String*
-
-%6java.math.BigDecimal´
-±
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 :(j
-%8java.lang.String"__concat*
-
-%7java.lang.String*	
-, date=Å
-Â
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:m :(q
-%9java.util.Date"__id*<*:0
-.com.infosys.FA4group6.OrderDTO.OrderDetailsDTO"
-dateÀ
-½
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 :(q
-%10java.lang.String"__concat*
-
-%8java.lang.String*
-
-%9java.util.Date¹
-¶
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 ;(
-%11java.lang.String"__concat*
-
-%10java.lang.String*
-
-, address=Ë
-È
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java; ;(
-%12java.lang.String"__id*?*=0
-.com.infosys.FA4group6.OrderDTO.OrderDetailsDTO"	
-addressÄ
-Á
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 ;(
-%13java.lang.String"__concat*
-
-%11java.lang.String*
-
-%12java.lang.String¸
-µ
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 ;(*
-%14java.lang.String"__concat*
-
-%13java.lang.String*
-	, status=Ê
-Ç
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java;- ;(3
-%15java.lang.String"__id*>*<0
-.com.infosys.FA4group6.OrderDTO.OrderDetailsDTO"
-statusÄ
-Á
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 ;(3
-%16java.lang.String"__concat*
-
-%14java.lang.String*
-
-%15java.lang.StringÁ
-¾
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 ;(J
-%17java.lang.String"__concat*
-
-%16java.lang.String*
-, orderedProducts=Ö
-Ó
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java;M ;(\
-%18java.util.ArrayList"__id*G*E0
-.com.infosys.FA4group6.OrderDTO.OrderDetailsDTO"
-orderedProductsÇ
-Ä
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 ;(\
-%19java.lang.String"__concat*
-
-%17java.lang.String*
-
-%18java.util.ArrayList°
-­
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java:	 ;(b
-%20java.lang.String"__concat*
-
-%19java.lang.String*
-]"ƒ
-f
-\C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/OrderDetailsDTO.java: ;(c
-
-%20java.lang.StringB20
+%0java.lang.StringB20
 .com.infosys.FA4group6.OrderDTO.OrderDetailsDTO

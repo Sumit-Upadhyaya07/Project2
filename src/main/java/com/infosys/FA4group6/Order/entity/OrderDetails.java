@@ -34,11 +34,9 @@ public class OrderDetails {
 	@Column(name="ADDRESS", nullable=false)
 	private String address;
 	
-	@Override
-	public String toString() {
-		return "OrderDetails [orderId=" + orderId + ", buyerId=" + buyerId + ", amount=" + amount + ", date=" + date
-				+ ", address=" + address + ", status=" + status + "]";
-	}
+	@Column(name="STATUS", nullable=false)
+	private String status;
+	
 
 	public Integer getOrderId() {
 		return orderId;
@@ -88,7 +86,6 @@ public class OrderDetails {
 		this.status = status;
 	}
 
-	@Column(name="STATUS", nullable=false)
-	private String status;
+	
 	
 }

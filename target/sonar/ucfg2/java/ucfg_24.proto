@@ -1,24 +1,27 @@
 
-jcom.infosys.FA4group6.Order.controller.OrderController#getOrders(Ljava/lang/Integer;)Ljava/util/ArrayList;n
-dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java'$ '(-"1*ˇ
+pcom.infosys.FA4group6.Order.controller.OrderController#getSellerOrders(Ljava/lang/Integer;)Ljava/util/ArrayList;n
+dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java0# 0(2"1*Ü
 1n
-dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java(	 ((Ä
+dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java1
+ 1(Ä
 ˝
 n
-dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java(	 ((7
+dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java1
+ 1(7
 %01com.infosys.FA4group6.Order.services.OrderService"__id*L*J8
 6com.infosys.FA4group6.Order.controller.OrderController"
-orderServiceˆÛ
+orderService˝˙
 n
-dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java(	 ((+
-%1java.util.ArrayList"hcom.infosys.FA4group6.Order.services.OrderService#getAllOrders(Ljava/lang/Integer;)Ljava/util/ArrayList;*9
+dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java1
+ 1(0
+%1java.util.ArrayList"kcom.infosys.FA4group6.Order.services.OrderService#getSellerOrders(Ljava/lang/Integer;)Ljava/util/ArrayList;*9
 7
-%01com.infosys.FA4group6.Order.services.OrderService*
-
-buyerIdjava.lang.Integer2!getAllOrders(Ljava/lang/Integer;)"ç
+%01com.infosys.FA4group6.Order.services.OrderService*
+
+sellerIdjava.lang.Integer2$getSellerOrders(Ljava/lang/Integer;)"ç
 n
-dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java( ((,
+dC:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/Order/controller/OrderController.java1 1(1
 
-%1java.util.ArrayList:
-buyerIdjava.lang.IntegerB:8
+%1java.util.ArrayList:
+sellerIdjava.lang.IntegerB:8
 6com.infosys.FA4group6.Order.controller.OrderController

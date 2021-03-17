@@ -65,70 +65,70 @@ public class OrderController {
 	}
 	
 //POST Request reOrdering using orderId and buyerId******************************************************************************
-	@PostMapping("/orders/reOrder/{orderId}/{buyerId}")
-	public String reorder(@PathVariable("orderId") Integer orderId,@PathVariable("buyerId") Integer buyerId) {
-		ArrayList <OrderDetailsDTO> orders=orderService.getAllOrders(buyerId);
-		Boolean request=false;
-		String result="";
-		for(int i =0; i<orders.size();i++) {
-			if(orderId.equals(orders.get(i).getOrderId())) {
-				OrderDetailsDTO order=orders.get(i);
-				request=true;
-				result=orderService.reOrder(order);
-			}
-		}
-		if(request){
-			return result;
-		}else{
-			return "Reorder is not successful";
-		}
-	}
-	
+//	@PostMapping("/orders/reOrder/{orderId}/{buyerId}")
+//	public String reorder(@PathVariable("orderId") Integer orderId,@PathVariable("buyerId") Integer buyerId) {
+//		ArrayList <OrderDetailsDTO> orders=orderService.getAllOrders(buyerId);
+//		Boolean request=false;
+//		String result="";
+//		for(int i =0; i<orders.size();i++) {
+//			if(orderId.equals(orders.get(i).getOrderId())) {
+//				OrderDetailsDTO order=orders.get(i);
+//				request=true;
+//				result=orderService.reOrder(order);
+//			}
+//		}
+//		if(request){
+//			return result;
+//		}else{
+//			return "Reorder is not successful";
+//		}
+//	}
+//	
 	
 //POST Request placing Order*****************************************************************************************************
-	@PostMapping("/orders/placeOrder")
-	public String placeOrder(@RequestBody OrderDetailsDTO order) {
-		
-		String cartURL1=cartURL+"cart/checkout/"+order.getBuyerId();		
-		try {
-        ResponseEntity<ProductsOrderedDTO[]> responseEntity = restTemplate.getForEntity(cartURL1, ProductsOrderedDTO[].class);
-        @NotNull
-        ProductsOrderedDTO[] objects = responseEntity.getBody();
-
-		List<Integer> prodIds= new ArrayList<Integer>();
-			
-	for(int i=0;i<10;i++) {
-			prodIds.add(objects[i].getProdId());
-			}
-		
-		ProductId prodId1=new ProductId();
-		prodId1.setProdId(prodIds);
-
-		
-		ResponseEntity<ProductsOrderedDTO[]> products1 = restTemplate.getForEntity(productURL, ProductsOrderedDTO[].class);
-		@NotNull
-		ProductsOrderedDTO[] products = products1.getBody();
-		ArrayList<ProductsOrderedDTO> productsOrderedDTOs=new ArrayList<ProductsOrderedDTO>();
-		for(int i=0;i<10;i++) {
-			productsOrderedDTOs.add(products[i]);
-		}
-		productsOrderedDTOs.forEach(element->{
-			for(int j=0;j<10;j++) {
-				if(objects[j].getProdId().equals(element.getProdId())) {
-					element.setQuantity(objects[j].getQuantity());
-				}
-			}
-		});
-		order.setOrderedProducts(productsOrderedDTOs);
-		
-		//orderService.placeOrder(order);
-		}
-		catch(Exception e){
-			e.printStackTrace();
-			return "Error occured while placing the order! ";
-		}
-		return "Order Sucessfully";
-	}
+//	@PostMapping("/orders/placeOrder")
+//	public String placeOrder(@RequestBody OrderDetailsDTO order) {
+//		
+//		String cartURL1=cartURL+"cart/checkout/"+order.getBuyerId();		
+//		try {
+//        ResponseEntity<ProductsOrderedDTO[]> responseEntity = restTemplate.getForEntity(cartURL1, ProductsOrderedDTO[].class);
+//        @NotNull
+//        ProductsOrderedDTO[] objects = responseEntity.getBody();
+//
+//		List<Integer> prodIds= new ArrayList<Integer>();
+//			
+//	for(int i=0;i<10;i++) {
+//			prodIds.add(objects[i].getProdId());
+//			}
+//		
+//		ProductId prodId1=new ProductId();
+//		prodId1.setProdId(prodIds);
+//
+//		
+//		ResponseEntity<ProductsOrderedDTO[]> products1 = restTemplate.getForEntity(productURL, ProductsOrderedDTO[].class);
+//		
+//		ProductsOrderedDTO[] products = products1.getBody();
+//		ArrayList<ProductsOrderedDTO> productsOrderedDTOs=new ArrayList<ProductsOrderedDTO>();
+//		for(int i=0;i<10;i++) {
+//			productsOrderedDTOs.add(products[i]);
+//		}
+//		productsOrderedDTOs.forEach(element->{
+//			for(int j=0;j<10;j++) {
+//				if(objects[j].getProdId().equals(element.getProdId())) {
+//					element.setQuantity(objects[j].getQuantity());
+//				}
+//			}
+//		});
+//		order.setOrderedProducts(productsOrderedDTOs);
+//		
+//		//orderService.placeOrder(order);
+//		}
+//		catch(Exception e){
+//			e.printStackTrace();
+//			return "Error occured while placing the order! ";
+//		}
+//		return "Order Sucessfully";
+//	}
 	
 	
 	

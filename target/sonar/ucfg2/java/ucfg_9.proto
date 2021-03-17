@@ -1,17 +1,17 @@
 
-Rcom.infosys.FA4group6.OrderDTO.ProductsOrderedDTO#getQuantity()Ljava/lang/Integer;i
-_C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/ProductsOrderedDTO.java ("1*Ì
+Rcom.infosys.FA4group6.OrderDTO.ProductsOrderedDTO#getSellerid()Ljava/lang/Integer;i
+_C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/ProductsOrderedDTO.java ("1*Ì
 1i
-_C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/ProductsOrderedDTO.java	 (Ò
+_C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/ProductsOrderedDTO.java	 (Ò
 Ï
 i
-_C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/ProductsOrderedDTO.java	 (
+_C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/ProductsOrderedDTO.java	 (
 %0java.lang.Integer"__id*C*A3
 1com.infosys.FA4group6.OrderDTO.ProductsOrderedDTO"
 
-quantity"†
+sellerid"†
 i
-_C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/ProductsOrderedDTO.java (
+_C:/Users/sam95/Desktop/OMS/src/main/java/com/infosys/FA4group6/OrderDTO/ProductsOrderedDTO.java (
 
 %0java.lang.IntegerB53
 1com.infosys.FA4group6.OrderDTO.ProductsOrderedDTO

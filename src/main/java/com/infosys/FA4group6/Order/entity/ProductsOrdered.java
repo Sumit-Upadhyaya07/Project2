@@ -90,11 +90,6 @@ public class ProductsOrdered implements Serializable{
 		this.sellerid = sellerid;
 	}
 
-	@Override
-	public String toString() {
-		return "ProductsOrdered [orderId=" + orderId + ", prodId=" + prodId + ", sellerid=" + sellerid + ", quantity="
-				+ quantity + ", status=" + status + "]";
-	}
 
 	
 
