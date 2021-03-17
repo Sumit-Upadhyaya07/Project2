@@ -1,0 +1,10 @@
+com\infosys\FA4group6\Order\controller\OrderController.class
+com\infosys\FA4group6\Order\services\OrderService.class
+com\infosys\FA4group6\Order\entity\ProductsOrdered.class
+com\infosys\FA4group6\Order\repository\OrderRepository.class
+com\infosys\FA4group6\OrderDTO\ProductId.class
+com\infosys\FA4group6\Order\repository\ProductsOrderedRepository.class
+com\infosys\FA4group6\OrderDTO\ProductsOrderedDTO.class
+com\infosys\FA4group6\Order\entity\OrderDetails.class
+com\infosys\FA4group6\OrderDTO\OrderDetailsDTO.class
+com\infosys\FA4group6\Order\OrderApplication.class

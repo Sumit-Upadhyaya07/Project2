@@ -104,52 +104,52 @@ public class OrderService {
   	
   	
 //placing order****************************************************************************************
-	public void placeOrder(OrderDetailsDTO order) {
-		ArrayList<ProductsOrderedDTO> prodRec=(ArrayList<ProductsOrderedDTO>) order.getOrderedProducts();
-		
-		BigDecimal amount=new BigDecimal(0);
-		for (int j=0;j<prodRec.size();j++) {
-			ProductsOrderedDTO productsOrderedDTO=prodRec.get(j);
-			amount=amount.add(productsOrderedDTO.getPrice().multiply(new BigDecimal(productsOrderedDTO.getQuantity())));
-		}
-		Integer eligibleDiscount= amount.multiply(new BigDecimal(0.1)).intValue();
-		
-      
-        Integer [] valuesArray=this.usingRewardPoints(order.getBuyerId(),eligibleDiscount);
-        BigDecimal discount=new BigDecimal(valuesArray[0]);
-
-
-		String privilegedURL=userURL+"buyer/isPrivilege/"+order.getBuyerId();
-	
-		ResponseEntity<Boolean> responseEntity1 = restTemplate.getForEntity(privilegedURL, Boolean.class);
-		
-		Boolean isPrivileged=responseEntity1.getBody();
-		
-		BigDecimal shippingCost=new BigDecimal(50);
-	
-		if(isPrivileged.equals(true)) {
-			shippingCost=new BigDecimal(0);
-		}
-		amount=amount.subtract(discount);
-		amount=amount.add(shippingCost);
-		order.setAmount(amount);
-		order.setDate(new Date());order.setStatus("ORDER PLACED");
-		
-		BeanUtils.copyProperties(order, orderDetails);
-		orderRepo.save(orderDetails);
-						
-		Integer orderId=orderDetails.getOrderId();
-		prodRec.forEach((ProductsOrderedDTO prod)->{
-			prod.setOrderId(orderId);
-			prod.setStatus("ORDER PLACED");
-			BeanUtils.copyProperties(prod, productsOrdered);
-			orderProdsRepo.save(productsOrdered);
-		});
-		
-		Integer finalRP = (amount.intValue()/100)+valuesArray[1]; 
-		String updateRewardPointsUrl = userURL +"rewardPoint/update/"+order.getBuyerId()+"/"+finalRP;
-		restTemplate.put(updateRewardPointsUrl,finalRP,Integer.class);
-	}
+//	public void placeOrder(OrderDetailsDTO order) {
+//		ArrayList<ProductsOrderedDTO> prodRec=(ArrayList<ProductsOrderedDTO>) order.getOrderedProducts();
+//		
+//		BigDecimal amount=new BigDecimal(0);
+//		for (int j=0;j<prodRec.size();j++) {
+//			ProductsOrderedDTO productsOrderedDTO=prodRec.get(j);
+//			amount=amount.add(productsOrderedDTO.getPrice().multiply(new BigDecimal(productsOrderedDTO.getQuantity())));
+//		}
+//		//Integer eligibleDiscount= amount.multiply(new BigDecimal(0.1)).intValue();
+//		
+//      
+//       // Integer [] valuesArray=this.usingRewardPoints(order.getBuyerId(),eligibleDiscount);
+//        //BigDecimal discount=new BigDecimal(valuesArray[0]);
+//
+//
+//		String privilegedURL=userURL+"buyer/isPrivilege/"+order.getBuyerId();
+//	
+//		ResponseEntity<Boolean> responseEntity1 = restTemplate.getForEntity(privilegedURL, Boolean.class);
+//		
+//		Boolean isPrivileged=responseEntity1.getBody();
+//		
+//		BigDecimal shippingCost=new BigDecimal(50);
+//	
+//		if(isPrivileged.equals(true)) {
+//			shippingCost=new BigDecimal(0);
+//		}
+//		//amount=amount.subtract(discount);
+//		amount=amount.add(shippingCost);
+//		order.setAmount(amount);
+//		order.setDate(new Date());order.setStatus("ORDER PLACED");
+//		
+//		BeanUtils.copyProperties(order, orderDetails);
+//		orderRepo.save(orderDetails);
+//						
+//		Integer orderId=orderDetails.getOrderId();
+//		prodRec.forEach((ProductsOrderedDTO prod)->{
+//			prod.setOrderId(orderId);
+//			prod.setStatus("ORDER PLACED");
+//			BeanUtils.copyProperties(prod, productsOrdered);
+//			orderProdsRepo.save(productsOrdered);
+//		});
+//		
+//		//Integer finalRP = (amount.intValue()/100)+valuesArray[1]; 
+//		String updateRewardPointsUrl = userURL +"rewardPoint/update/"+order.getBuyerId()+"/"+finalRP;
+//		restTemplate.put(updateRewardPointsUrl,finalRP,Integer.class);
+//	}
 	
 //reOrder  ********************************************************************************************************
 	public String reOrder(OrderDetailsDTO order) {
@@ -168,7 +168,7 @@ public class OrderService {
 		order.setOrderedProducts(orderedProducts);
 		order.setAmount(new BigDecimal(0));
 		order.setOrderId(null);
-		this.placeOrder(order);
+		//this.placeOrder(order);
 		}catch(Exception excp){
 			excp.printStackTrace();
 			return "Error in placing the order! Contact your Admin";

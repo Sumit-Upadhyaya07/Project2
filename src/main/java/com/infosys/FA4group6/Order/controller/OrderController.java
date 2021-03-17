@@ -2,6 +2,9 @@ package com.infosys.FA4group6.Order.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.validation.constraints.NotNull;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.ResponseEntity;
@@ -88,7 +91,8 @@ public class OrderController {
 		
 		String cartURL1=cartURL+"cart/checkout/"+order.getBuyerId();		
 		try {
-        ResponseEntity<ProductsOrderedDTO[]> responseEntity = restTemplate.getForEntity(cartURL1, ProductsOrderedDTO[].class);   
+        ResponseEntity<ProductsOrderedDTO[]> responseEntity = restTemplate.getForEntity(cartURL1, ProductsOrderedDTO[].class);
+        @NotNull
         ProductsOrderedDTO[] objects = responseEntity.getBody();
 
 		List<Integer> prodIds= new ArrayList<Integer>();
@@ -102,6 +106,7 @@ public class OrderController {
 
 		
 		ResponseEntity<ProductsOrderedDTO[]> products1 = restTemplate.getForEntity(productURL, ProductsOrderedDTO[].class);
+		@NotNull
 		ProductsOrderedDTO[] products = products1.getBody();
 		ArrayList<ProductsOrderedDTO> productsOrderedDTOs=new ArrayList<ProductsOrderedDTO>();
 		for(int i=0;i<10;i++) {
@@ -116,7 +121,7 @@ public class OrderController {
 		});
 		order.setOrderedProducts(productsOrderedDTOs);
 		
-		orderService.placeOrder(order);
+		//orderService.placeOrder(order);
 		}
 		catch(Exception e){
 			e.printStackTrace();
